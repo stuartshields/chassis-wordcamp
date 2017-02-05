@@ -14,7 +14,7 @@ class wordcamp::plugins (
 		'buddypress',
 		'bbpress',
 		'camptix-pagseguro',
-		'camptix-payfast-gateway'
+		'camptix-payfast-gateway',
 		'jetpack',
 		'json-rest-api',
 		'wp-multibyte-patch',
