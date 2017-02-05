@@ -1,5 +1,5 @@
 class wordcamp::plugins (
-	$path	= "/vagrant/extensions/vip",
+	$path	= "/vagrant/extensions/wordcamp",
 	$wordcamp_config = sz_load_config(),
 
 	$github_plugins = [
@@ -34,7 +34,7 @@ if ! ( File['/vagrant/content'] ) {
 		}
 	}
 
-	vip::gitcheck { $github_plugins: }
+	wordcamp::gitcheck { $github_plugins: }
 
 	# Install plugins
 	wp::plugin { $plugins:
