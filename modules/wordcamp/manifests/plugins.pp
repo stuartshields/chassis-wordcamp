@@ -41,4 +41,20 @@ class wordcamp::plugins (
 
 	wordcamp::gitcheck { $github_plugins: }
 
+	exec { "camptix-install":
+		command => "git clone https://github.com/Automattic/camptix.git /vagrant/content/plugins/camptix",
+   		path	=> '/usr/bin/',
+		require => Package[ 'git-core' ],
+		onlyif  => "test ! -d /vagrant/content/plugins/camptix",
+		timeout => 0
+	}
+
+	exec { "camptix-update":
+		command => "git --work-tree=/vagrant/content/plugins/camptix/ --git-dir=/vagrant/content/plugins/camptix/.git pull origin master",
+		path	=> [ '/usr/bin/', '/bin' ],
+		require => [ Package[ 'git-core' ] ],
+		onlyif  => "test -d /vagrant/content/plugins/camptix",
+		timeout => 0
+	}
+
 }
