@@ -3,7 +3,7 @@ define wordcamp::gitcheck (
 )
 {
 	exec { "${$plugins}-install":
-		command => "git clone https://github.com/${$plugins}.git /vagrant/content/plugins/${$plugins}",
+		command => "git clone https://github.com/svn2github/${$plugins}.git /vagrant/content/plugins/${$plugins}",
 		path    => '/usr/bin/',
 		require => Package[ 'git-core' ],
 		onlyif  => "test ! -d /vagrant/content/plugins/${$plugins}",

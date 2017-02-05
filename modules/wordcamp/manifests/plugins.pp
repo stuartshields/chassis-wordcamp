@@ -3,10 +3,9 @@ class wordcamp::plugins (
 	$wordcamp_config = sz_load_config(),
 
 	$github_plugins = [
-		'svn2github/camptix-network-tools',
-		'svn2github/email-post-changes',
-		'svn2github/tagregator',
-		'Automattic/camptix',
+		'camptix-network-tools',
+		'email-post-changes',
+		'tagregator',
 	],
 
 	$plugins = [
@@ -22,7 +21,7 @@ class wordcamp::plugins (
 	]
 )
 {
-if ! ( File['/vagrant/content'] ) {
+	if ! ( File['/vagrant/content'] ) {
 		file { "/vagrant/content":
 			ensure => "directory",
 		}
@@ -34,11 +33,12 @@ if ! ( File['/vagrant/content'] ) {
 		}
 	}
 
-	wordcamp::gitcheck { $github_plugins: }
-
 	# Install plugins
 	wp::plugin { $plugins:
 		location => '/vagrant/wp',
 		require  => Class['wp']
 	}
+
+	wordcamp::gitcheck { $github_plugins: }
+
 }
