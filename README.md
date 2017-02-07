@@ -1,4 +1,4 @@
-# Wordcamp Extension Beta
+# WordCamp Extension Beta
 Adds WordCamp support to Chassis
 
 This is based on [meta-environment](https://github.com/WordPress/meta-environment) by Automattic.
