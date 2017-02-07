@@ -16,8 +16,14 @@ This is based on [meta-environment](https://github.com/WordPress/meta-environmen
 	6. `10.86.73.80 2014.seattle.wordcamp.dev`
 	
 4. `vagrant up`
-5. `git clone git@github.com:stuartshields/chassis-wordcamp.git extensions/vip`
+5. `git clone git@github.com:stuartshields/chassis-wordcamp.git extensions/wordcamp`
 6. `vagrant provision` - Depending on your internet connection, this could take a while
+7. Download the [wordcamp_dev.sql](https://raw.githubusercontent.com/WordPress/meta-environment/master/wordcamp.dev/provision/wordcamp_dev.sql) into the `vagrant/content` folder
+8. `vagrant ssh` into the box
+9. `cd /vagrant/content`
+10. `wp db import wordcamp_dev.sql`
+
+Done!
 
 ### Adding additional extensions
 It's recommended that you install the following Chassis extensions
