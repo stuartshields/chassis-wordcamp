@@ -1,20 +1,18 @@
-define wordcamp::gitcheck (
-	$plugins = $title
-)
+define wordcamp::gitcheck ( $git_urls )
 {
-	exec { "${$plugins}-install":
-		command => "git clone https://github.com/svn2github/${$plugins}.git /vagrant/content/plugins/${$plugins}",
+	exec { "${$title}-install":
+		command => "git clone https://github.com/${$git_urls[$title]}.git /vagrant/content/plugins/${$title}",
 		path    => '/usr/bin/',
 		require => Package[ 'git-core' ],
-		onlyif  => "test ! -d /vagrant/content/plugins/${$plugins}",
+		onlyif  => "test ! -d /vagrant/content/plugins/${$title}",
 		timeout => 0
 	}
 
-	exec { "${$plugins}-update":
-		command => "git --work-tree=/vagrant/content/plugins/${$plugins} --git-dir=/vagrant/content/plugins/${$plugins}/.git pull origin master",
+	exec { "${$title}-update":
+		command => "git --work-tree=/vagrant/content/plugins/${$title} --git-dir=/vagrant/content/plugins/${$title}/.git pull origin master",
 		path    => [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
-		onlyif  => "test -d /vagrant/content/plugins/${$plugins}",
+		onlyif  => "test -d /vagrant/content/plugins/${$title}",
 		timeout => 0
 	}
 }
