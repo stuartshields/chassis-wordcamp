@@ -5,7 +5,6 @@ class wordcamp::plugins (
 	$github_plugins = {
 		# svn2github
 		'camptix-network-tools'            => 'svn2github/camptix-network-tools',
-		'email-post-changes'               => 'svn2github/email-post-changes',
 		'email-post-changes-specific-post' => 'svn2github/email-post-changes-specific-post',
 		'tagregator'                       => 'svn2github/tagregator',
 		'bbpress-network-templates'        => 'svn2github/bbpress-network-templates',
@@ -47,6 +46,7 @@ class wordcamp::plugins (
 		'bbpress',
 		'camptix-pagseguro',
 		'camptix-payfast-gateway',
+		'email-post-changes',
 		'jetpack',
 		'json-rest-api',
 		'wp-multibyte-patch',
