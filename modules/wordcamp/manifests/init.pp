@@ -20,6 +20,5 @@ class wordcamp (
 		owner   => 'root',
 		group   => 'root',
 		mode    => 0644,
-		onlyif  => "test -d /vagrant/config/mu-plugins/wp-super-cache-plugins",
 	}
 }
