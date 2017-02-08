@@ -15,8 +15,29 @@ class wordcamp (
 		mode    => 0644,
 	}
 
-	file { "/vagrant/content/config/sandbox-functionality.php":
-		content => template('wordcamp/sandbox-functionality.php.erb'),
+	file { "/vagrant/content/advanced-cache.php":
+		content => template('wordcamp/advanced-cache.php.erb'),
+		owner   => 'root',
+		group   => 'root',
+		mode    => 0644,
+	}
+
+	file { "/vagrant/content/sunrise.php":
+		content => template('wordcamp/sunrise.php.erb'),
+		owner   => 'root',
+		group   => 'root',
+		mode    => 0644,
+	}
+
+	file { "/vagrant/content/config/batcache-config.php":
+		content => template('wordcamp/batcache-config.php.erb'),
+		owner   => 'root',
+		group   => 'root',
+		mode    => 0644,
+	}
+
+	file { "/vagrant/content/config/is-mobile.php":
+		content => template('wordcamp/is-mobile.php.erb'),
 		owner   => 'root',
 		group   => 'root',
 		mode    => 0644,

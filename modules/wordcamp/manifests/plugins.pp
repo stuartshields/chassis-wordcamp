@@ -5,7 +5,8 @@ class wordcamp::plugins (
 	$github_plugins = {
 		# svn2github
 		'camptix-network-tools'            => 'svn2github/camptix-network-tools',
-		'email-post-changes-specific-post' => 'svn2github/email-post-changes',
+		'email-post-changes'               => 'svn2github/email-post-changes',
+		'email-post-changes-specific-post' => 'svn2github/email-post-changes-specific-post',
 		'tagregator'                       => 'svn2github/tagregator',
 		'bbpress-network-templates'        => 'svn2github/bbpress-network-templates',
 		'camptix-badge-generator'          => 'svn2github/camptix-badge-generator',
@@ -25,6 +26,7 @@ class wordcamp::plugins (
 		'wordcamp-payments'                => 'svn2github/wordcamp-payments',
 		'wordcamp-payments-network'        => 'svn2github/wordcamp-payments-network',
 		'wordcamp-qbo'                     => 'svn2github/wordcamp-qbo',
+		'wordcamp-qbo-client'              => 'svn2github/wordcamp-qbo-client',
 		'wordcamp-remote-css'              => 'svn2github/wordcamp-remote-css',
 		'wordcamp-site-cloner'             => 'svn2github/wordcamp-site-cloner',
 		'wordcamp-spreadsheets'            => 'svn2github/wordcamp-spreadsheets',
@@ -78,7 +80,7 @@ class wordcamp::plugins (
 	}
 
 	exec { "mu-plugins-install":
-		command => "git clone https://github.com/svn2github/wordcamp-mu-plugins.git /vagrant/content/mu-plugins",
+		command => "git clone https://github.com/stuartshields/wordcamp-mu-plugins.git /vagrant/content/mu-plugins",
 		path	=> '/usr/bin/',
 		require => Package[ 'git-core' ],
 		onlyif  => "test ! -d /vagrant/content/mu-plugins",
