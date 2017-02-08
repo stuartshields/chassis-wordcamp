@@ -8,10 +8,18 @@ class wordcamp (
 		mode    => 0644,
 	}
 
-	file { "/vagrant/content/mu-plugins/sandbox-functionality.php":
+	file { "/vagrant/content/config":
+		ensure => "directory",
+		owner   => 'root',
+		group   => 'root',
+		mode    => 0644,
+	}
+
+	file { "/vagrant/content/config/sandbox-functionality.php":
 		content => template('wordcamp/sandbox-functionality.php.erb'),
 		owner   => 'root',
 		group   => 'root',
 		mode    => 0644,
+		onlyif  => "test -d /vagrant/config/mu-plugins/wp-super-cache-plugins",
 	}
 }

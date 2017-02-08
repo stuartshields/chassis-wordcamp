@@ -101,7 +101,7 @@ class wordcamp::plugins (
 		timeout => 0
 	}
 
-	exec { "mu-plugins-update":
+	exec { "wp-super-cache-plugins-update":
 		command => "git --work-tree=/vagrant/content/wp-super-cache-plugins --git-dir=/vagrant/content/wp-super-cache-plugins/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
