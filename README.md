@@ -6,7 +6,6 @@ This is based on [meta-environment](https://github.com/WordPress/meta-environmen
 ## Installing & Documentation
 
 1. Clone chassis `chassis` by `git clone --recursive https://github.com/Chassis/Chassis wordcamp-dev`.
-2. 
 2. Download the `config.yaml` - [config template](https://gist.github.com/stuartshields/7673027fa016506d29e061a788a1bde6) into the `/wordcamp-dev/content` folder (this will overwrite the existing file)
 3. Download the `config.local.yaml` - [config local template](https://gist.github.com/stuartshields/9080eb14eab87f7de43699e42a392370) into the `/wordcamp-dev/content` folder
 4. Add the following to your `hosts` file
