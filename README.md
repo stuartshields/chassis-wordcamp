@@ -1,7 +1,7 @@
 # WordCamp Extension Beta
 Adds WordCamp support to Chassis
 
-This is based on [meta-environment](https://github.com/WordPress/meta-environment) by the WordPress community.
+This is based on [meta-environment](https://github.com/WordPress/meta-environment) by the WordPress [#meta team](https://make.wordpress.org/meta/handbook/) and community.
 
 ## Installing & Documentation
 
