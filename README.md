@@ -5,10 +5,9 @@ This is based on [meta-environment](https://github.com/WordPress/meta-environmen
 
 ## Installing & Documentation
 
-1. Clone chassis `chassis` by `git clone --recursive https://github.com/Chassis/Chassis chassis`.
-2. Download the `config.yaml` - [config template](https://gist.github.com/stuartshields/7673027fa016506d29e061a788a1bde6) into the `/vagrant` folder (this will overwrite the existing file)
-3. Download the `config.local.yaml` - [config local template](https://gist.github.com/stuartshields/9080eb14eab87f7de43699e42a392370) into the `/vagrant` folder
-4. Add the following to your `hosts` file
+1. Clone chassis `wordcamp-dev` by `git clone --recursive https://github.com/Chassis/Chassis wordcamp-dev`.
+2. Clone `config.yaml` into `content` folder by `git clone https://github.com/stuartshields/chassis-wordcamp-config.git wordcamp-dev/content`
+3. Add the following to your `hosts` file
 	1. `10.86.73.80 wordcamp.dev`
 	2. `10.86.73.80 central.wordcamp.dev`
 	3. `10.86.73.80 2014.new-site.wordcamp.dev`
@@ -16,13 +15,13 @@ This is based on [meta-environment](https://github.com/WordPress/meta-environmen
 	5. `10.86.73.80 2014.misc.wordcamp.dev`
 	6. `10.86.73.80 2014.seattle.wordcamp.dev`
 	
-5. `vagrant up`
-6. `git clone git@github.com:stuartshields/chassis-wordcamp.git extensions/wordcamp`
-7. `vagrant provision` - Depending on your internet connection, this could take a while
-8. Download the [wordcamp_dev.sql](https://raw.githubusercontent.com/WordPress/meta-environment/master/wordcamp.dev/provision/wordcamp_dev.sql) into the `vagrant/content` folder
-9. `vagrant ssh` into the box
-10. `cd /vagrant/content`
-11. `wp db import wordcamp_dev.sql`
+4. `vagrant up`
+5. `git clone git@github.com:stuartshields/chassis-wordcamp.git extensions/wordcamp`
+6. `vagrant provision` - Depending on your internet connection, this could take a while
+7. Download the [wordcamp_dev.sql](https://raw.githubusercontent.com/WordPress/meta-environment/master/wordcamp.dev/provision/wordcamp_dev.sql) into the `vagrant/content` folder
+8. `vagrant ssh` into the box
+9. `cd /vagrant/content`
+10. `wp db import wordcamp_dev.sql`
 
 Done!
 
