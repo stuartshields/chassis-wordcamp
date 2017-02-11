@@ -23,7 +23,11 @@ This is based on [meta-environment](https://github.com/WordPress/meta-environmen
 9. `cd /vagrant/content`
 10. `wp db import wordcamp_dev.sql`
 
-Done!
+Note: You may receive the following error:
+
+`The plugin wordcamp-organizer-nags/wordcamp-organizer-nags.php has been deactivated due to an error: Plugin file does not exist.`
+
+You can ignore this error, since the plugin no longer exists in the original repo.
 
 ### Adding additional extensions
 It's recommended that you install the following Chassis extensions
