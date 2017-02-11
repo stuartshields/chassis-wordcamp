@@ -38,4 +38,6 @@ It's recommended that you install the following Chassis extensions
 
 [Debugging](https://github.com/Chassis/Debugging)
 
+[Mailhog](https://github.com/Chassis/MailHog)
+
 Once all extensions are added you can now `vagrant provision`
