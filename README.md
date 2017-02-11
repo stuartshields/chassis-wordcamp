@@ -8,12 +8,12 @@ This is based on [meta-environment](https://github.com/WordPress/meta-environmen
 1. Clone chassis `wordcamp-dev` by `git clone --recursive https://github.com/Chassis/Chassis wordcamp-dev`.
 2. Clone `config.yaml` into `content` folder by `git clone https://github.com/stuartshields/chassis-wordcamp-config.git wordcamp-dev/content`
 3. Add the following to your `hosts` file
-	1. `10.86.73.80 wordcamp.dev`
-	2. `10.86.73.80 central.wordcamp.dev`
-	3. `10.86.73.80 2014.new-site.wordcamp.dev`
-	4. `10.86.73.80 2014.content.wordcamp.dev`
-	5. `10.86.73.80 2014.misc.wordcamp.dev`
-	6. `10.86.73.80 2014.seattle.wordcamp.dev`
+	1. `10.86.73.70 wordcamp.dev`
+	2. `10.86.73.70 central.wordcamp.dev`
+	3. `10.86.73.70 2014.new-site.wordcamp.dev`
+	4. `10.86.73.70 2014.content.wordcamp.dev`
+	5. `10.86.73.70 2014.misc.wordcamp.dev`
+	6. `10.86.73.70 2014.seattle.wordcamp.dev`
 	
 4. `vagrant up`
 5. `git clone git@github.com:stuartshields/chassis-wordcamp.git extensions/wordcamp`
