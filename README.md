@@ -29,6 +29,16 @@ Note: You may receive the following error:
 
 You can ignore this error, since the plugin no longer exists in the original repo.
 
+### FAQ
+**How do I add a new site?**
+
+1. Visit [new site](http://wordcamp.dev/wp-admin/network/site-new.php) under `Site Address` add the new site i.e: `2017-auckland`, complete the other fields with whatever you want and then click `Add Site`.
+2. Click on the newly created site, under `Site Address` rename it to something like `2017.auckland` and click `Save Changes`
+3. Add the new site to your `hosts` files.
+
+Props to [tareiking](https://github.com/tareiking) for this.
+
+
 ### Adding additional extensions
 It's recommended that you install the following Chassis extensions
 
