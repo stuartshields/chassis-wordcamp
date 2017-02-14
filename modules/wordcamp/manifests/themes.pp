@@ -14,7 +14,7 @@ class wordcamp::themes (
 		command => "git --work-tree=/vagrant/content/themes/wordcamp-base/ --git-dir=/vagrant/content/themes/wordcamp-base/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
-		onlyif  => "test -d /vagrant/content/themes/wordcamp-base",
+		onlyif  => "test -d /vagrant/content/themes/wordcamp-base/.git",
 		timeout => 0
 	}
 
@@ -30,7 +30,7 @@ class wordcamp::themes (
 		command => "git --work-tree=/vagrant/content/themes/wordcamp-base-v2/ --git-dir=/vagrant/content/themes/wordcamp-base-v2/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
-		onlyif  => "test -d /vagrant/content/themes/wordcamp-base-v2",
+		onlyif  => "test -d /vagrant/content/themes/wordcamp-base-v2/.git",
 		timeout => 0
 	}
 
@@ -46,7 +46,7 @@ class wordcamp::themes (
 		command => "git --work-tree=/vagrant/content/themes/wordcamp-plan/ --git-dir=/vagrant/content/themes/wordcamp-plan/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
-		onlyif  => "test -d /vagrant/content/themes/wordcamp-plan",
+		onlyif  => "test -d /vagrant/content/themes/wordcamp-plan/.git",
 		timeout => 0
 	}
 
@@ -62,7 +62,7 @@ class wordcamp::themes (
 		command => "git --work-tree=/vagrant/content/themes/wordcamp-central-2012/ --git-dir=/vagrant/content/themes/wordcamp-central-2012/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
-		onlyif  => "test -d /vagrant/content/themes/wordcamp-central-2012",
+		onlyif  => "test -d /vagrant/content/themes/wordcamp-central-2012/.git",
 		timeout => 0
 	}
 
