@@ -91,7 +91,7 @@ class wordcamp::plugins (
 		command => "git --work-tree=/vagrant/content/mu-plugins --git-dir=/vagrant/content/mu-plugins/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
-		onlyif  => "test -d /vagrant/content/mu-plugins",
+		onlyif  => "test -d /vagrant/content/mu-plugins/.git",
 		timeout => 0
 	}
 
@@ -107,7 +107,7 @@ class wordcamp::plugins (
 		command => "git --work-tree=/vagrant/content/wp-super-cache-plugins --git-dir=/vagrant/content/wp-super-cache-plugins/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
-		onlyif  => "test -d /vagrant/content/wp-super-cache-plugins",
+		onlyif  => "test -d /vagrant/content/wp-super-cache-plugins/.git",
 		timeout => 0
 	}
 

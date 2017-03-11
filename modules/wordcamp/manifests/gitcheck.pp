@@ -12,7 +12,7 @@ define wordcamp::gitcheck ( $git_urls )
 		command => "git --work-tree=/vagrant/content/plugins/${$title} --git-dir=/vagrant/content/plugins/${$title}/.git pull origin master",
 		path    => [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
-		onlyif  => "test -d /vagrant/content/plugins/${$title}",
+		onlyif  => "test -d /vagrant/content/plugins/${$title}/.git",
 		timeout => 0
 	}
 }
